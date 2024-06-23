@@ -1,0 +1,1 @@
+export { WheelComponent } from "./Wheel";
