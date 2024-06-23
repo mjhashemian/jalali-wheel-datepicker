@@ -2,6 +2,8 @@
 
 > react jalali wheel date picker in ios style
 
+> ![](https://github.com/Ihr_Repository-Name/Ihr_GIF-Name.gif?raw=true)
+
 ## Prerequisites
 
 This project requires NodeJS (version 12 or later) and NPM.
