@@ -2,7 +2,7 @@
 
 > react jalali wheel date picker in ios style
 
-> ![](https://drive.google.com/file/d/1n3-mK4IsdwYtgUjc-BZl-6Bw3sDYQx38/view?usp=drive_link?raw=true)
+> ![](https://drive.google.com/file/d/1n3-mK4IsdwYtgUjc-BZl-6Bw3sDYQx38/view?usp=sharing)
 
 ## Prerequisites
 
