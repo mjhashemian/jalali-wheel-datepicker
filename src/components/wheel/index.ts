@@ -1,1 +1,1 @@
-export { WheelComponent } from "./Wheel";
+export { Wheel as WheelComponent } from "./Wheel";

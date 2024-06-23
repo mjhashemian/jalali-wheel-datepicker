@@ -2,7 +2,9 @@
 
 > react jalali wheel date picker in ios style
 
-> ![](https://drive.google.com/file/d/1n3-mK4IsdwYtgUjc-BZl-6Bw3sDYQx38/view?usp=sharing)
+## Preview
+
+> you can check out the preview on this link : https://6677fd997ffbc47279e235b6--dashing-tarsier-9341d2.netlify.app/
 
 ## Prerequisites
 
@@ -19,6 +21,7 @@ v8.16.0
 
 - [Project Name](#project-name)
   - [Prerequisites](#prerequisites)
+  - [Preview](#preview)
   - [props](#props)
   - [Installation](#installation)
   - [Contributing](#contributing)
@@ -57,29 +60,35 @@ export default App;
 
 ## Props
 
-| props            | type                    | Description                      |
-| ---------------- | ----------------------- | -------------------------------- |
-| header           | String                  | the header title                 |
-| ------           | -------------           | --------------------             |
-| preview          | String                  | the DatePicker preview           |
-| ------           | -------------           | --------------------             |
-| previewClassName | string                  | the DatePicker preview className |
-| ------           | -------------           | --------------------             |
-| inputClassName   | string                  | the input className              |
-| ------           | -------------           | --------------------             |
-| buttonText       | string                  | button modal Value               |
-| ------           | -------------           | --------------------             |
-| inputSuffix      | string                  | the input suffix                 |
-| ------           | -------------           | --------------------             |
-| inputPrefix      | string                  | the input prefix                 |
-| ------           | -------------           | --------------------             |
-| selectedDate     | string                  | selected Date                    |
-| ------           | -------------           | --------------------             |
-| changeDate       | (date : string) => void | selected Date function           |
-| ------           | -------------           | --------------------             |
-| modalWidth       | string                  | modal width                      |
-| ------           | -------------           | --------------------             |
-| previewStyles    | React.CSSProperties     | preview styles                   |
+| props            | type                    | Description                       |
+| ---------------- | ----------------------- | --------------------------------- |
+| header           | String                  | the header title                  |
+| ------           | -------------           | --------------------              |
+| preview          | String                  | the DatePicker preview            |
+| ------           | -------------           | --------------------              |
+| previewClassName | string                  | the DatePicker preview className  |
+| ------           | -------------           | --------------------              |
+| inputClassName   | string                  | the input className               |
+| ------           | -------------           | --------------------              |
+| buttonText       | string                  | button modal Value                |
+| ------           | -------------           | --------------------              |
+| inputSuffix      | string                  | the input suffix                  |
+| ------           | -------------           | --------------------              |
+| inputPrefix      | string                  | the input prefix                  |
+| ------           | -------------           | --------------------              |
+| selectedDate     | string                  | selected Date                     |
+| ------           | -------------           | --------------------              |
+| changeDate       | (date : string) => void | selected Date function            |
+| ------           | -------------           | --------------------              |
+| modalWidth       | string                  | modal width                       |
+| ------           | -------------           | --------------------              |
+| previewStyles    | React.CSSProperties     | preview styles                    |
+| ------           | -------------           | --------------------              |
+| initialDay       | number                  | set initial Day for day wheel     |
+| ------           | -------------           | --------------------              |
+| initialMonth     | number                  | set initial Month for Month wheel |
+| ------           | -------------           | --------------------              |
+| initialYear      | number                  | set initial Year for Year wheel   |
 
 ## Contributing
 

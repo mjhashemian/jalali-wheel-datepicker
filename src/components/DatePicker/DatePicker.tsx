@@ -14,6 +14,12 @@ interface IDatePicker {
   changeDate?: (date: string) => void;
   modalWidth?: string;
   previewStyles?: { [key: string]: React.CSSProperties };
+  maxMonth?: number;
+  value?: string;
+  setValue?: (value: string) => void;
+  initialDay?: number;
+  initialMonth?: number;
+  initialYear?: number;
 }
 
 export const DatePicker: React.FC<IDatePicker> = ({
@@ -28,11 +34,15 @@ export const DatePicker: React.FC<IDatePicker> = ({
   changeDate,
   modalWidth,
   previewStyles,
+  value,
+  setValue,
+  initialDay,
+  initialMonth,
+  initialYear,
 }) => {
   const [open, setOpen] = useState<boolean>(false);
-  const [value, setValue] = useState<string>("");
   const handleClickSubmit = () => {
-    setValue(selectedDate!);
+    setValue && setValue(selectedDate!);
     setOpen(false);
   };
   return (
@@ -51,6 +61,8 @@ export const DatePicker: React.FC<IDatePicker> = ({
         value={value && value}
         prefix={inputPrefix}
         suffix={inputSuffix}
+        type="none"
+        readOnly
       />
       <Modal
         title={header}
@@ -61,13 +73,23 @@ export const DatePicker: React.FC<IDatePicker> = ({
       >
         <div>
           <Divider style={{ margin: "5px" }} />
-          <CustomJalaliCalendar onDateChange={changeDate} />
+          <CustomJalaliCalendar
+            initialDay={initialDay!}
+            initialMonth={initialMonth!}
+            initialYear={initialYear!}
+            onDateChange={changeDate}
+          />
           <Divider style={{ margin: "5px" }} />
         </div>
-        {selectedDate && preview && (
+        {preview && (
           <div
             className={previewClassName}
-            style={{ ...previewStyles, marginTop: "16px", textAlign: "center" }}
+            style={{
+              ...previewStyles,
+              marginTop: "16px",
+              textAlign: "center",
+              color: "#000",
+            }}
           >
             {selectedDate}
           </div>

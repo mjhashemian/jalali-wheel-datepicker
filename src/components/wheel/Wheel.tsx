@@ -75,8 +75,8 @@ const persianMonths = [
   { value: "اسفند", number: "12" },
 ];
 
-export const WheelComponent: React.FC<WheelProps> = ({
-  perspective = "center",
+export const Wheel: React.FC<WheelProps> = ({
+  
   length,
   loop,
   width,

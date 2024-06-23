@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment-jalaali";
-import { WheelComponent } from "../wheel";
+import { Wheel } from "../wheel/Wheel";
 
 interface CustomJalaliCalendarProps {
   onDateChange?: (date: string) => void;
+  initialDay: number;
+  initialMonth: number;
+  initialYear: number;
 }
 
 export const CustomJalaliCalendar: React.FC<CustomJalaliCalendarProps> = ({
   onDateChange,
+  initialDay,
+  initialMonth,
+  initialYear,
 }) => {
   const [updateWheel, setUpdateWheel] = React.useState(false);
   const [selectedDay, setSelectedDay] = useState<string>("1");
@@ -72,7 +78,7 @@ export const CustomJalaliCalendar: React.FC<CustomJalaliCalendarProps> = ({
         }}
       >
         {updateWheel && (
-          <WheelComponent
+          <Wheel
             length={lengthNumber}
             loop={false}
             isDay={true}
@@ -84,7 +90,7 @@ export const CustomJalaliCalendar: React.FC<CustomJalaliCalendarProps> = ({
             width="30%"
             height="300px"
             onChangeDate={handleDayChange}
-            initialDay={Number(selectedDay)}
+            initialDay={initialDay}
           />
         )}
       </div>
@@ -98,7 +104,7 @@ export const CustomJalaliCalendar: React.FC<CustomJalaliCalendarProps> = ({
         }}
       >
         {updateWheel && (
-          <WheelComponent
+          <Wheel
             length={19} // You can adjust this as needed
             loop={false}
             isMonth={true}
@@ -110,7 +116,7 @@ export const CustomJalaliCalendar: React.FC<CustomJalaliCalendarProps> = ({
             onChangeDate={handleMonthChange}
             width="30%"
             height="300px"
-            initialMonth={Number(selectedMonth)}
+            initialMonth={initialMonth}
           />
         )}
       </div>
@@ -124,8 +130,8 @@ export const CustomJalaliCalendar: React.FC<CustomJalaliCalendarProps> = ({
         }}
       >
         {updateWheel && (
-          <WheelComponent
-            length={100}
+          <Wheel
+            length={100} // You can adjust this as needed
             loop={false}
             isYear={true}
             selectedDay={Number(selectedDay)}
@@ -135,7 +141,7 @@ export const CustomJalaliCalendar: React.FC<CustomJalaliCalendarProps> = ({
             onChangeDate={handleYearChange}
             width="30%"
             height="300px"
-            initialYear={Number(selectedYear)}
+            initialYear={initialYear}
           />
         )}
       </div>
