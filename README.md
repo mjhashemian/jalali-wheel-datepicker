@@ -2,7 +2,7 @@
 
 > react jalali wheel date picker in ios style
 
- ##Preview
+ ## Preview
  
 > you can check out the preview on this link : https://6677fd997ffbc47279e235b6--dashing-tarsier-9341d2.netlify.app/
 
